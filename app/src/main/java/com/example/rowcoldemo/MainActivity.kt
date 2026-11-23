@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.paddingFrom
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Scaffold
@@ -53,9 +54,11 @@ fun MainScreen(modifier: Modifier = Modifier) {
         )
         Text(
             text = "Small Text",
-            Modifier.alignByBaseline(),
+            modifier = Modifier.paddingFrom(
+                alignmentLine = FirstBaseline, before = 80.dp, after = 0.dp
+            ),
             fontSize = 32.sp,
-            fontWeight = FontWeight.Bold,
+            fontWeight = FontWeight.Bold
         )
     }
 }
